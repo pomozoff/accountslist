@@ -14,6 +14,10 @@
 		26BD11781BABFCDA005F13B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BD11761BABFCDA005F13B2 /* LaunchScreen.storyboard */; };
 		26BD11831BABFCDA005F13B2 /* Accounts_ListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11821BABFCDA005F13B2 /* Accounts_ListTests.m */; };
 		26BD118E1BABFCDA005F13B2 /* Accounts_ListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD118D1BABFCDA005F13B2 /* Accounts_ListUITests.m */; };
+		26BD11A01BABFE0C005F13B2 /* AccountsListAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD119F1BABFE0C005F13B2 /* AccountsListAssembly.m */; settings = {ASSET_TAGS = (); }; };
+		26BD11A31BABFE70005F13B2 /* Typhoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BD11A21BABFE70005F13B2 /* Typhoon.framework */; settings = {ASSET_TAGS = (); }; };
+		26BD11A71BABFEA0005F13B2 /* Typhoon.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26BD11A41BABFE7E005F13B2 /* Typhoon.framework.dSYM */; };
+		26BD11AD1BABFFFD005F13B2 /* StartUpConfiguratorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11AC1BABFFFD005F13B2 /* StartUpConfiguratorBase.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		26BD11A61BABFE95005F13B2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				26BD11A71BABFEA0005F13B2 /* Typhoon.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		26BD11651BABFCDA005F13B2 /* Accounts List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Accounts List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BD11691BABFCDA005F13B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,6 +65,13 @@
 		26BD11891BABFCDA005F13B2 /* Accounts ListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Accounts ListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BD118D1BABFCDA005F13B2 /* Accounts_ListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Accounts_ListUITests.m; sourceTree = "<group>"; };
 		26BD118F1BABFCDA005F13B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26BD119E1BABFE0C005F13B2 /* AccountsListAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsListAssembly.h; sourceTree = "<group>"; };
+		26BD119F1BABFE0C005F13B2 /* AccountsListAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsListAssembly.m; sourceTree = "<group>"; };
+		26BD11A21BABFE70005F13B2 /* Typhoon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Typhoon.framework; path = Carthage/Build/iOS/Typhoon.framework; sourceTree = "<group>"; };
+		26BD11A41BABFE7E005F13B2 /* Typhoon.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Typhoon.framework.dSYM; path = Carthage/Build/iOS/Typhoon.framework.dSYM; sourceTree = "<group>"; };
+		26BD11AB1BABFFFD005F13B2 /* StartUpConfiguratorBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartUpConfiguratorBase.h; sourceTree = "<group>"; };
+		26BD11AC1BABFFFD005F13B2 /* StartUpConfiguratorBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartUpConfiguratorBase.m; sourceTree = "<group>"; };
+		26BD11AE1BAC008F005F13B2 /* StartUpConfigurator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartUpConfigurator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26BD11A31BABFE70005F13B2 /* Typhoon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +106,7 @@
 				26BD11671BABFCDA005F13B2 /* Accounts List */,
 				26BD11811BABFCDA005F13B2 /* Accounts ListTests */,
 				26BD118C1BABFCDA005F13B2 /* Accounts ListUITests */,
+				26BD11A11BABFE5A005F13B2 /* Frameworks */,
 				26BD11661BABFCDA005F13B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,12 +124,10 @@
 		26BD11671BABFCDA005F13B2 /* Accounts List */ = {
 			isa = PBXGroup;
 			children = (
-				26BD116B1BABFCDA005F13B2 /* AppDelegate.h */,
-				26BD116C1BABFCDA005F13B2 /* AppDelegate.m */,
-				26BD11711BABFCDA005F13B2 /* Main.storyboard */,
-				26BD11741BABFCDA005F13B2 /* Assets.xcassets */,
-				26BD11761BABFCDA005F13B2 /* LaunchScreen.storyboard */,
-				26BD11791BABFCDA005F13B2 /* Info.plist */,
+				26BD11A91BABFFA0005F13B2 /* Protocols */,
+				26BD119D1BABFDEA005F13B2 /* Assembly */,
+				26BD119B1BABFCFE005F13B2 /* Application */,
+				26BD119C1BABFD07005F13B2 /* Resources */,
 				26BD11681BABFCDA005F13B2 /* Supporting Files */,
 			);
 			path = "Accounts List";
@@ -135,6 +159,54 @@
 			path = "Accounts ListUITests";
 			sourceTree = "<group>";
 		};
+		26BD119B1BABFCFE005F13B2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				26BD116B1BABFCDA005F13B2 /* AppDelegate.h */,
+				26BD116C1BABFCDA005F13B2 /* AppDelegate.m */,
+				26BD11AB1BABFFFD005F13B2 /* StartUpConfiguratorBase.h */,
+				26BD11AC1BABFFFD005F13B2 /* StartUpConfiguratorBase.m */,
+				26BD11791BABFCDA005F13B2 /* Info.plist */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		26BD119C1BABFD07005F13B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				26BD11711BABFCDA005F13B2 /* Main.storyboard */,
+				26BD11741BABFCDA005F13B2 /* Assets.xcassets */,
+				26BD11761BABFCDA005F13B2 /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		26BD119D1BABFDEA005F13B2 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				26BD119E1BABFE0C005F13B2 /* AccountsListAssembly.h */,
+				26BD119F1BABFE0C005F13B2 /* AccountsListAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		26BD11A11BABFE5A005F13B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26BD11A21BABFE70005F13B2 /* Typhoon.framework */,
+				26BD11A41BABFE7E005F13B2 /* Typhoon.framework.dSYM */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26BD11A91BABFFA0005F13B2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				26BD11AE1BAC008F005F13B2 /* StartUpConfigurator.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +217,8 @@
 				26BD11611BABFCDA005F13B2 /* Sources */,
 				26BD11621BABFCDA005F13B2 /* Frameworks */,
 				26BD11631BABFCDA005F13B2 /* Resources */,
+				26BD11A61BABFE95005F13B2 /* CopyFiles */,
+				26BD11A81BABFEA6005F13B2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -260,12 +334,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26BD11A81BABFEA6005F13B2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Typhoon.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		26BD11611BABFCDA005F13B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				26BD116D1BABFCDA005F13B2 /* AppDelegate.m in Sources */,
+				26BD11AD1BABFFFD005F13B2 /* StartUpConfiguratorBase.m in Sources */,
+				26BD11A01BABFE0C005F13B2 /* AccountsListAssembly.m in Sources */,
 				26BD116A1BABFCDA005F13B2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +500,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Accounts List/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.akademon.Accounts-List";
@@ -418,6 +515,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Accounts List/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.akademon.Accounts-List";

@@ -1,0 +1,4 @@
+# DI container Typhoon
+#github "appsquickly/Typhoon"
+git "git@github.com:appsquickly/Typhoon.git"
+

@@ -1,13 +1,15 @@
 //
-//  StartUpConfiguratorBase.m
+//  Account.m
 //  Accounts List
 //
 //  Created by Anton Pomozov on 18.09.15.
 //  Copyright © 2015 Akademon Ltd. All rights reserved.
 //
 
-#import "StartUpConfiguratorBase.h"
+#import "Account.h"
 
-@implementation StartUpConfiguratorBase
+@implementation Account
+
+// Insert code here to add functionality to your managed object subclass
 
 @end

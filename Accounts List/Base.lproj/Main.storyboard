@@ -4,16 +4,16 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Accounts-->
         <scene sceneID="eoX-0f-SWU">
             <objects>
-                <tableViewController id="ql6-Oz-EAx" sceneMemberID="viewController">
+                <tableViewController id="ql6-Oz-EAx" customClass="AccountTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hnz-eS-hUC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Account List" id="Mxe-Ec-WJO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Account List" id="Mxe-Ec-WJO" customClass="AccountTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mxe-Ec-WJO" id="j7N-CJ-t1l">
@@ -27,7 +27,7 @@
                             <outlet property="delegate" destination="ql6-Oz-EAx" id="QBs-9j-Pig"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="rrV-uG-Oro"/>
+                    <navigationItem key="navigationItem" title="Accounts" id="rrV-uG-Oro"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfS-7n-Pcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

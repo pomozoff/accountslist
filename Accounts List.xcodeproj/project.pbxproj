@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		269BC6B61BAC4829005A1DA3 /* AccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BC6B51BAC4829005A1DA3 /* AccountTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		269BC6C11BB03381005A1DA3 /* AccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BC6C01BB03381005A1DA3 /* AccountTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		26BD116A1BABFCDA005F13B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11691BABFCDA005F13B2 /* main.m */; };
 		26BD116D1BABFCDA005F13B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD116C1BABFCDA005F13B2 /* AppDelegate.m */; };
 		26BD11731BABFCDA005F13B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BD11711BABFCDA005F13B2 /* Main.storyboard */; };
@@ -17,7 +19,14 @@
 		26BD11A01BABFE0C005F13B2 /* AccountsListAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD119F1BABFE0C005F13B2 /* AccountsListAssembly.m */; settings = {ASSET_TAGS = (); }; };
 		26BD11A31BABFE70005F13B2 /* Typhoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BD11A21BABFE70005F13B2 /* Typhoon.framework */; settings = {ASSET_TAGS = (); }; };
 		26BD11A71BABFEA0005F13B2 /* Typhoon.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26BD11A41BABFE7E005F13B2 /* Typhoon.framework.dSYM */; };
-		26BD11AD1BABFFFD005F13B2 /* StartUpConfiguratorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11AC1BABFFFD005F13B2 /* StartUpConfiguratorBase.m */; settings = {ASSET_TAGS = (); }; };
+		26BD11B61BAC0BA4005F13B2 /* CommonModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11B41BAC0BA4005F13B2 /* CommonModel.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		26BD11BD1BAC0BF5005F13B2 /* Account+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11BA1BAC0BF5005F13B2 /* Account+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		26BD11BE1BAC0BF5005F13B2 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11BC1BAC0BF5005F13B2 /* Account.m */; settings = {ASSET_TAGS = (); }; };
+		26BD11C21BAC0CEF005F13B2 /* CoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11C11BAC0CEF005F13B2 /* CoreDataStore.m */; settings = {ASSET_TAGS = (); }; };
+		26BD11C61BAC1025005F13B2 /* ErrorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11C51BAC1025005F13B2 /* ErrorHelper.m */; settings = {ASSET_TAGS = (); }; };
+		26BD11CB1BAC17E2005F13B2 /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 26BD11CA1BAC17E2005F13B2 /* Warnings.xcconfig */; settings = {ASSET_TAGS = (); }; };
+		26BD11CE1BAC3481005F13B2 /* AccountCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11CD1BAC3481005F13B2 /* AccountCoreDataManager.m */; settings = {ASSET_TAGS = (); }; };
+		26BD11D01BAC3AC6005F13B2 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11CF1BAC3AC6005F13B2 /* AccountManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		269BC6B41BAC4829005A1DA3 /* AccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTableViewController.h; sourceTree = "<group>"; };
+		269BC6B51BAC4829005A1DA3 /* AccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTableViewController.m; sourceTree = "<group>"; };
+		269BC6BF1BB03381005A1DA3 /* AccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTableViewCell.h; sourceTree = "<group>"; };
+		269BC6C01BB03381005A1DA3 /* AccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTableViewCell.m; sourceTree = "<group>"; };
 		26BD11651BABFCDA005F13B2 /* Accounts List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Accounts List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BD11691BABFCDA005F13B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		26BD116B1BABFCDA005F13B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,9 +82,22 @@
 		26BD119F1BABFE0C005F13B2 /* AccountsListAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsListAssembly.m; sourceTree = "<group>"; };
 		26BD11A21BABFE70005F13B2 /* Typhoon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Typhoon.framework; path = Carthage/Build/iOS/Typhoon.framework; sourceTree = "<group>"; };
 		26BD11A41BABFE7E005F13B2 /* Typhoon.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Typhoon.framework.dSYM; path = Carthage/Build/iOS/Typhoon.framework.dSYM; sourceTree = "<group>"; };
-		26BD11AB1BABFFFD005F13B2 /* StartUpConfiguratorBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartUpConfiguratorBase.h; sourceTree = "<group>"; };
-		26BD11AC1BABFFFD005F13B2 /* StartUpConfiguratorBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartUpConfiguratorBase.m; sourceTree = "<group>"; };
-		26BD11AE1BAC008F005F13B2 /* StartUpConfigurator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartUpConfigurator.h; sourceTree = "<group>"; };
+		26BD11AF1BAC091E005F13B2 /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountManager.h; path = Protocols/AccountManager.h; sourceTree = "<group>"; };
+		26BD11B51BAC0BA4005F13B2 /* CommonModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CommonModel.xcdatamodel; sourceTree = "<group>"; };
+		26BD11B91BAC0BF5005F13B2 /* Account+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Account+CoreDataProperties.h"; sourceTree = "<group>"; };
+		26BD11BA1BAC0BF5005F13B2 /* Account+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Account+CoreDataProperties.m"; sourceTree = "<group>"; };
+		26BD11BB1BAC0BF5005F13B2 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		26BD11BC1BAC0BF5005F13B2 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		26BD11C01BAC0CEF005F13B2 /* CoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStore.h; sourceTree = "<group>"; };
+		26BD11C11BAC0CEF005F13B2 /* CoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStore.m; sourceTree = "<group>"; };
+		26BD11C41BAC1025005F13B2 /* ErrorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorHelper.h; sourceTree = "<group>"; };
+		26BD11C51BAC1025005F13B2 /* ErrorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorHelper.m; sourceTree = "<group>"; };
+		26BD11C71BAC137F005F13B2 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		26BD11C81BAC1593005F13B2 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataStore.h; path = Protocols/DataStore.h; sourceTree = "<group>"; };
+		26BD11CA1BAC17E2005F13B2 /* Warnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+		26BD11CC1BAC3481005F13B2 /* AccountCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCoreDataManager.h; sourceTree = "<group>"; };
+		26BD11CD1BAC3481005F13B2 /* AccountCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCoreDataManager.m; sourceTree = "<group>"; };
+		26BD11CF1BAC3AC6005F13B2 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +126,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		269BC6B31BAC47DD005A1DA3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				269BC6B41BAC4829005A1DA3 /* AccountTableViewController.h */,
+				269BC6B51BAC4829005A1DA3 /* AccountTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		269BC6BE1BB03371005A1DA3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				269BC6BF1BB03381005A1DA3 /* AccountTableViewCell.h */,
+				269BC6C01BB03381005A1DA3 /* AccountTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		26BD115C1BABFCDA005F13B2 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +168,10 @@
 		26BD11671BABFCDA005F13B2 /* Accounts List */ = {
 			isa = PBXGroup;
 			children = (
+				269BC6BE1BB03371005A1DA3 /* Views */,
+				269BC6B31BAC47DD005A1DA3 /* Controllers */,
+				26BD11B21BAC0B66005F13B2 /* Models */,
+				26BD11C31BAC1008005F13B2 /* Helpers */,
 				26BD11A91BABFFA0005F13B2 /* Protocols */,
 				26BD119D1BABFDEA005F13B2 /* Assembly */,
 				26BD119B1BABFCFE005F13B2 /* Application */,
@@ -164,9 +212,8 @@
 			children = (
 				26BD116B1BABFCDA005F13B2 /* AppDelegate.h */,
 				26BD116C1BABFCDA005F13B2 /* AppDelegate.m */,
-				26BD11AB1BABFFFD005F13B2 /* StartUpConfiguratorBase.h */,
-				26BD11AC1BABFFFD005F13B2 /* StartUpConfiguratorBase.m */,
 				26BD11791BABFCDA005F13B2 /* Info.plist */,
+				26BD11CA1BAC17E2005F13B2 /* Warnings.xcconfig */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -202,9 +249,77 @@
 		26BD11A91BABFFA0005F13B2 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				26BD11AE1BAC008F005F13B2 /* StartUpConfigurator.h */,
+				26BD11C71BAC137F005F13B2 /* Common.h */,
 			);
-			name = Protocols;
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		26BD11B21BAC0B66005F13B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				26BD11C91BAC161F005F13B2 /* Data managers */,
+				26BD11B31BAC0B86005F13B2 /* Data store */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		26BD11B31BAC0B86005F13B2 /* Data store */ = {
+			isa = PBXGroup;
+			children = (
+				26BD11B81BAC0BDE005F13B2 /* Managed objects */,
+				26BD11B71BAC0BCF005F13B2 /* Data models */,
+				26BD11BF1BAC0CBF005F13B2 /* Stores */,
+			);
+			name = "Data store";
+			sourceTree = "<group>";
+		};
+		26BD11B71BAC0BCF005F13B2 /* Data models */ = {
+			isa = PBXGroup;
+			children = (
+				26BD11B41BAC0BA4005F13B2 /* CommonModel.xcdatamodeld */,
+			);
+			name = "Data models";
+			sourceTree = "<group>";
+		};
+		26BD11B81BAC0BDE005F13B2 /* Managed objects */ = {
+			isa = PBXGroup;
+			children = (
+				26BD11B91BAC0BF5005F13B2 /* Account+CoreDataProperties.h */,
+				26BD11BA1BAC0BF5005F13B2 /* Account+CoreDataProperties.m */,
+				26BD11BB1BAC0BF5005F13B2 /* Account.h */,
+				26BD11BC1BAC0BF5005F13B2 /* Account.m */,
+			);
+			name = "Managed objects";
+			sourceTree = "<group>";
+		};
+		26BD11BF1BAC0CBF005F13B2 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				26BD11C81BAC1593005F13B2 /* DataStore.h */,
+				26BD11C01BAC0CEF005F13B2 /* CoreDataStore.h */,
+				26BD11C11BAC0CEF005F13B2 /* CoreDataStore.m */,
+			);
+			name = Stores;
+			sourceTree = "<group>";
+		};
+		26BD11C31BAC1008005F13B2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				26BD11C41BAC1025005F13B2 /* ErrorHelper.h */,
+				26BD11C51BAC1025005F13B2 /* ErrorHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		26BD11C91BAC161F005F13B2 /* Data managers */ = {
+			isa = PBXGroup;
+			children = (
+				26BD11AF1BAC091E005F13B2 /* AccountManager.h */,
+				26BD11CF1BAC3AC6005F13B2 /* AccountManager.m */,
+				26BD11CC1BAC3481005F13B2 /* AccountCoreDataManager.h */,
+				26BD11CD1BAC3481005F13B2 /* AccountCoreDataManager.m */,
+			);
+			name = "Data managers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26BD11781BABFCDA005F13B2 /* LaunchScreen.storyboard in Resources */,
+				26BD11CB1BAC17E2005F13B2 /* Warnings.xcconfig in Resources */,
 				26BD11751BABFCDA005F13B2 /* Assets.xcassets in Resources */,
 				26BD11731BABFCDA005F13B2 /* Main.storyboard in Resources */,
 			);
@@ -356,10 +472,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26BD11BD1BAC0BF5005F13B2 /* Account+CoreDataProperties.m in Sources */,
+				26BD11BE1BAC0BF5005F13B2 /* Account.m in Sources */,
+				26BD11C21BAC0CEF005F13B2 /* CoreDataStore.m in Sources */,
+				26BD11B61BAC0BA4005F13B2 /* CommonModel.xcdatamodeld in Sources */,
 				26BD116D1BABFCDA005F13B2 /* AppDelegate.m in Sources */,
-				26BD11AD1BABFFFD005F13B2 /* StartUpConfiguratorBase.m in Sources */,
+				269BC6C11BB03381005A1DA3 /* AccountTableViewCell.m in Sources */,
+				26BD11C61BAC1025005F13B2 /* ErrorHelper.m in Sources */,
+				26BD11CE1BAC3481005F13B2 /* AccountCoreDataManager.m in Sources */,
+				269BC6B61BAC4829005A1DA3 /* AccountTableViewController.m in Sources */,
 				26BD11A01BABFE0C005F13B2 /* AccountsListAssembly.m in Sources */,
 				26BD116A1BABFCDA005F13B2 /* main.m in Sources */,
+				26BD11D01BAC3AC6005F13B2 /* AccountManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +540,7 @@
 /* Begin XCBuildConfiguration section */
 		26BD11901BABFCDA005F13B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26BD11CA1BAC17E2005F13B2 /* Warnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -593,6 +718,7 @@
 				26BD11941BABFCDA005F13B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26BD11951BABFCDA005F13B2 /* Build configuration list for PBXNativeTarget "Accounts ListTests" */ = {
 			isa = XCConfigurationList;
@@ -601,6 +727,7 @@
 				26BD11971BABFCDA005F13B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26BD11981BABFCDA005F13B2 /* Build configuration list for PBXNativeTarget "Accounts ListUITests" */ = {
 			isa = XCConfigurationList;
@@ -609,8 +736,22 @@
 				26BD119A1BABFCDA005F13B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		26BD11B41BAC0BA4005F13B2 /* CommonModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				26BD11B51BAC0BA4005F13B2 /* CommonModel.xcdatamodel */,
+			);
+			currentVersion = 26BD11B51BAC0BA4005F13B2 /* CommonModel.xcdatamodel */;
+			path = CommonModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 26BD115D1BABFCDA005F13B2 /* Project object */;
 }

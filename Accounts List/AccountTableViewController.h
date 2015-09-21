@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  AccountTableViewController.h
 //  Accounts List
 //
 //  Created by Anton Pomozov on 18.09.15.
@@ -8,8 +8,8 @@
 
 @import UIKit;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "AccountManager.h"
 
-@property (nonnull, strong, nonatomic) UIWindow *window;
+@interface AccountTableViewController : UITableViewController
 
 @end

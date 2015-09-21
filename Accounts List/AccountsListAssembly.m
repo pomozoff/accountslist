@@ -7,18 +7,39 @@
 //
 
 #import "AccountsListAssembly.h"
-#import "StartUpConfiguratorBase.h"
+#import "CoreDataStore.h"
+#import "AccountCoreDataManager.h"
 
 @implementation AccountsListAssembly
 
+#pragma mark - Public
+
 - (AppDelegate *)appDelegate {
     return [TyphoonDefinition withClass:[AppDelegate class] configuration:^(TyphoonDefinition *definition) {
-        [definition injectProperty:@selector(startUpConfigurator) with:[self startUpConfigurator]];
+        [definition injectProperty:@selector(accountManager) with:[self accountManager]];
+    }];
+}
+- (AccountTableViewController *)accountTableViewController {
+    return [TyphoonDefinition withClass:[AccountTableViewController class] configuration:^(TyphoonDefinition *definition) {
+        [definition injectProperty:@selector(accountManager) with:[self accountManager]];
     }];
 }
 
-- (id <StartUpConfigurator>)startUpConfigurator {
-    return [TyphoonDefinition withClass:[StartUpConfiguratorBase class]];
+#pragma mark - Private
+
+- (id <AccountManager>)accountManager {
+    return [TyphoonDefinition withClass:[AccountCoreDataManager class] configuration:^(TyphoonDefinition *definition) {
+        [definition injectProperty:@selector(dataStore) with:[self dataStore]];
+        definition.scope = TyphoonScopeSingleton;
+    }];
+}
+- (id <DataStore>)dataStore {
+    return [TyphoonDefinition withClass:[CoreDataStore class] configuration:^(TyphoonDefinition *definition) {
+        [definition useInitializer:@selector(initWithModelName:) parameters:^(TyphoonMethod *initializer) {
+            [initializer injectParameterWith:@"CommonModel"];
+        }];
+        definition.scope = TyphoonScopeSingleton;
+    }];
 }
 
 @end

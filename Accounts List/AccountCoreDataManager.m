@@ -13,7 +13,7 @@
 #import "CoreDataStore.h"
 #import "Account+CoreDataProperties.h"
 
-@interface AccountCoreDataManager () <NSFetchedResultsControllerDelegate, DataFetcher, TableDataSource, TableDataPresenterDelegate>
+@interface AccountCoreDataManager () <NSFetchedResultsControllerDelegate, DataFetcher, TableDataSource, DataPresenterDelegate>
 
 @property (nonatomic, strong) CoreDataStore *dataStore;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;

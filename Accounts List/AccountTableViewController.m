@@ -9,7 +9,7 @@
 #import "AccountTableViewController.h"
 #import "AccountTableViewCell.h"
 
-@interface AccountTableViewController () <AccountManagerDelegate, TableDataPresenter>
+@interface AccountTableViewController () <AccountManagerDelegate, DataPresenter>
 
 @end
 

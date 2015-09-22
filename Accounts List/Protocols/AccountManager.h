@@ -49,7 +49,7 @@ typedef enum : NSUInteger {
 
 @end
 
-@protocol TableDataPresenter <NSObject>
+@protocol DataPresenter <NSObject>
 
 @property (nonatomic, strong) NSBlockOperation *updateOperation;
 
@@ -65,15 +65,15 @@ typedef enum : NSUInteger {
 
 @end
 
-@protocol TableDataPresenterDelegate <NSObject>
+@protocol DataPresenterDelegate <NSObject>
 
-@property (nonatomic, strong) id <TableDataPresenter> presenter;
+@property (nonatomic, strong) id <DataPresenter> presenter;
 
 @end
 
 @protocol AccountManagerDelegate <NSObject>
 
-@property (nonnull, strong, nonatomic) id <DataStoreDelegate, DataFetcher, TableDataSource, TableDataPresenterDelegate> accountManager;
+@property (nonnull, strong, nonatomic) id <DataStoreDelegate, DataFetcher, TableDataSource, DataPresenterDelegate> accountManager;
 
 @end
 

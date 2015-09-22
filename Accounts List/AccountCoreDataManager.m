@@ -13,13 +13,6 @@
 #import "CoreDataStore.h"
 #import "Account+CoreDataProperties.h"
 
-typedef NS_ENUM(NSUInteger, AccountCoreDataManagerError) {
-    ErrorFetchedResultsControllerIsEmpty,
-};
-
-static NSString * const kAccountCoreDataManagerErrorDomain = @"AccountCoreDataManagerErrorDomain";
-static NSUInteger const kBatchSize = 20;
-
 @interface AccountCoreDataManager () <NSFetchedResultsControllerDelegate, DataFetcher, TableDataSource, TableDataPresenterDelegate>
 
 @property (nonatomic, strong) CoreDataStore *dataStore;
@@ -28,6 +21,13 @@ static NSUInteger const kBatchSize = 20;
 @end
 
 @implementation AccountCoreDataManager
+
+typedef NS_ENUM(NSUInteger, AccountCoreDataManagerError) {
+    ErrorFetchedResultsControllerIsEmpty,
+};
+
+static NSString * const kAccountCoreDataManagerErrorDomain = @"AccountCoreDataManagerErrorDomain";
+static NSUInteger const kBatchSize = 20;
 
 #pragma mark - Properties
 

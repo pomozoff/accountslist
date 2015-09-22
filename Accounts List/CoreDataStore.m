@@ -9,9 +9,6 @@
 #import "CoreDataStore.h"
 #import "ErrorHelper.h"
 
-static NSString * const kDataBaseManagerFileName = @"DataModel";
-static NSString * const kDataBaseManagerErrorDomain = @"CoreDataStoreErrorDomain";
-
 typedef NS_ENUM(NSUInteger, CoreDataStoreError) {
     ErrorModelURLNotCreated,
     ErrorManagedObjectModelNotCreated,
@@ -27,6 +24,9 @@ typedef NS_ENUM(NSUInteger, CoreDataStoreError) {
 @end
 
 @implementation CoreDataStore
+
+static NSString * const kDataBaseManagerFileName = @"DataModel";
+static NSString * const kDataBaseManagerErrorDomain = @"CoreDataStoreErrorDomain";
 
 #pragma mark - Properties
 

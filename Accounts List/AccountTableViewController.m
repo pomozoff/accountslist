@@ -9,13 +9,13 @@
 #import "AccountTableViewController.h"
 #import "AccountTableViewCell.h"
 
-static NSString * const kCellReuseIdentifier = @"Account Cell";
-
 @interface AccountTableViewController () <AccountManagerDelegate, TableDataPresenter>
 
 @end
 
 @implementation AccountTableViewController
+
+static NSString * const kCellReuseIdentifier = @"Account Cell";
 
 #pragma mark - Properties
 

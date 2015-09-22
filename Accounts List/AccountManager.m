@@ -25,8 +25,12 @@
         [NSException raise:NSInternalInconsistencyException
                     format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
         self = nil;
-    } else {
+    } else if ([self isKindOfClass:[AccountManager class]]) {
         self = [super init];
+    } else {
+        [NSException raise:NSInternalInconsistencyException
+                    format:@"Incompatible class type %@ as a subclass", NSStringFromClass([self class])];
+        self = nil;
     }
     return self;
 }

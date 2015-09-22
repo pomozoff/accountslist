@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		269BC6B61BAC4829005A1DA3 /* AccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BC6B51BAC4829005A1DA3 /* AccountTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		269BC6C11BB03381005A1DA3 /* AccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BC6C01BB03381005A1DA3 /* AccountTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		269BC6C41BB16692005A1DA3 /* ServicesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BC6C31BB16692005A1DA3 /* ServicesCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		26BD116A1BABFCDA005F13B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11691BABFCDA005F13B2 /* main.m */; };
 		26BD116D1BABFCDA005F13B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD116C1BABFCDA005F13B2 /* AppDelegate.m */; };
 		26BD11731BABFCDA005F13B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BD11711BABFCDA005F13B2 /* Main.storyboard */; };
@@ -64,6 +65,8 @@
 		269BC6B51BAC4829005A1DA3 /* AccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTableViewController.m; sourceTree = "<group>"; };
 		269BC6BF1BB03381005A1DA3 /* AccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTableViewCell.h; sourceTree = "<group>"; };
 		269BC6C01BB03381005A1DA3 /* AccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTableViewCell.m; sourceTree = "<group>"; };
+		269BC6C21BB16692005A1DA3 /* ServicesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicesCollectionViewController.h; sourceTree = "<group>"; };
+		269BC6C31BB16692005A1DA3 /* ServicesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicesCollectionViewController.m; sourceTree = "<group>"; };
 		26BD11651BABFCDA005F13B2 /* Accounts List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Accounts List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BD11691BABFCDA005F13B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		26BD116B1BABFCDA005F13B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 			children = (
 				269BC6B41BAC4829005A1DA3 /* AccountTableViewController.h */,
 				269BC6B51BAC4829005A1DA3 /* AccountTableViewController.m */,
+				269BC6C21BB16692005A1DA3 /* ServicesCollectionViewController.h */,
+				269BC6C31BB16692005A1DA3 /* ServicesCollectionViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -480,6 +485,7 @@
 				269BC6C11BB03381005A1DA3 /* AccountTableViewCell.m in Sources */,
 				26BD11C61BAC1025005F13B2 /* ErrorHelper.m in Sources */,
 				26BD11CE1BAC3481005F13B2 /* AccountCoreDataManager.m in Sources */,
+				269BC6C41BB16692005A1DA3 /* ServicesCollectionViewController.m in Sources */,
 				269BC6B61BAC4829005A1DA3 /* AccountTableViewController.m in Sources */,
 				26BD11A01BABFE0C005F13B2 /* AccountsListAssembly.m in Sources */,
 				26BD116A1BABFCDA005F13B2 /* main.m in Sources */,

@@ -13,7 +13,7 @@
 #import "CoreDataStore.h"
 #import "Account+CoreDataProperties.h"
 
-@interface AccountCoreDataManager () <NSFetchedResultsControllerDelegate, DataFetcher, TableDataSource, DataPresenterDelegate>
+@interface AccountCoreDataManager () <NSFetchedResultsControllerDelegate, AccountDataFetcher, TableDataSource, DataPresenterDelegate>
 
 @property (nonatomic, strong) CoreDataStore *dataStore;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
@@ -52,10 +52,10 @@ static NSUInteger const kBatchSize = 20;
 
 #pragma mark - TableDataSource
 
-- (NSInteger)numberOfSections {
+- (NSInteger)tableNumberOfSections {
     return (NSInteger)self.fetchedResultsController.sections.count;
 }
-- (NSInteger)numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableNumberOfRowsInSection:(NSInteger)section {
     NSInteger rows = 0;
     if (self.fetchedResultsController.sections.count > 0) {
         id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController.sections objectAtIndex:(NSUInteger)section];
@@ -63,14 +63,14 @@ static NSUInteger const kBatchSize = 20;
     }
     return rows;
 }
-- (NSString *)titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableTitleForHeaderInSection:(NSInteger)section {
     id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController.sections objectAtIndex:(NSUInteger)section];
     return sectionInfo.name;
 }
-- (NSInteger)sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+- (NSInteger)tableSectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
     return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
 }
-- (NSArray *)sectionIndexTitles {
+- (NSArray *)tableSectionIndexTitles {
     return [self.fetchedResultsController sectionIndexTitles];
 }
 
@@ -102,7 +102,7 @@ static NSUInteger const kBatchSize = 20;
     [self.presenter didChangeContent];
 }
 
-#pragma mark - AccountManager
+#pragma mark - DataFetcher
 
 - (id <Account>)objectAtIndexPath:(NSIndexPath *)indexPath {
     Account *account = [self.fetchedResultsController objectAtIndexPath:indexPath];

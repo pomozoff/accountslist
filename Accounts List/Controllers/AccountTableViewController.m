@@ -7,6 +7,7 @@
 //
 
 #import "AccountTableViewController.h"
+#import "AccountManager.h"
 #import "AccountTableViewCell.h"
 
 @interface AccountTableViewController () <AccountManagerDelegate, DataPresenter>
@@ -40,22 +41,22 @@ static NSString * const kCellReuseIdentifier = @"Account Cell";
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [self.accountManager numberOfSections];
+    return [self.accountManager tableNumberOfSections];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.accountManager numberOfRowsInSection:section];
+    return [self.accountManager tableNumberOfRowsInSection:section];
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [self.accountManager titleForHeaderInSection:section];
+    return [self.accountManager tableTitleForHeaderInSection:section];
 }
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
-    return [self.accountManager sectionForSectionIndexTitle:title atIndex:index];
+    return [self.accountManager tableSectionForSectionIndexTitle:title atIndex:index];
 }
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    return [self.accountManager sectionIndexTitles];
+    return [self.accountManager tableSectionIndexTitles];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AccountTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellReuseIdentifier forIndexPath:indexPath];
@@ -64,7 +65,7 @@ static NSString * const kCellReuseIdentifier = @"Account Cell";
     return cell;
 }
 
-#pragma mark - AccountDataPresentable
+#pragma mark - DataPresenter
 
 - (void)reloadData {
     [self.tableView reloadData];
@@ -95,6 +96,19 @@ static NSString * const kCellReuseIdentifier = @"Account Cell";
             }];
             break;
         }
+        case TableChangeUpdate: {
+            [self.updateOperation addExecutionBlock:^{
+                [weakTableView reloadSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            }];
+            break;
+        }
+        case TableChangeMove: {
+            [self.updateOperation addExecutionBlock:^{
+                [weakTableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+                [weakTableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            }];
+            break;
+        }
         default:
             break;
     }
@@ -108,26 +122,26 @@ static NSString * const kCellReuseIdentifier = @"Account Cell";
     switch(type) {
         case TableChangeInsert: {
             [self.updateOperation addExecutionBlock:^{
-                [weakTableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+                [weakTableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             }];
             break;
         }
         case TableChangeDelete: {
             [self.updateOperation addExecutionBlock:^{
-                [weakTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+                [weakTableView deleteRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             }];
             break;
         }
         case TableChangeUpdate: {
             [self.updateOperation addExecutionBlock:^{
-                [weakTableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+                [weakTableView reloadRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             }];
             break;
         }
         case TableChangeMove: {
             [self.updateOperation addExecutionBlock:^{
-                [weakTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-                [weakTableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+                [weakTableView deleteRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+                [weakTableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             }];
             break;
         }

@@ -9,6 +9,7 @@
 #import "AccountsListAssembly.h"
 #import "CoreDataStore.h"
 #import "AccountCoreDataManager.h"
+#import "ServiceCoreDataManager.h"
 
 @implementation AccountsListAssembly
 
@@ -16,7 +17,7 @@
 
 - (AppDelegate *)appDelegate {
     return [TyphoonDefinition withClass:[AppDelegate class] configuration:^(TyphoonDefinition *definition) {
-        [definition injectProperty:@selector(accountManager) with:[self accountManager]];
+        [definition injectProperty:@selector(dataStore) with:[self dataStore]];
     }];
 }
 - (AccountTableViewController *)accountTableViewController {
@@ -27,7 +28,7 @@
 
 #pragma mark - Private
 
-- (id <DataFetcher>)accountManager {
+- (id <AccountDataFetcher>)accountManager {
     return [TyphoonDefinition withClass:[AccountCoreDataManager class] configuration:^(TyphoonDefinition *definition) {
         [definition injectProperty:@selector(dataStore) with:[self dataStore]];
         definition.scope = TyphoonScopeSingleton;

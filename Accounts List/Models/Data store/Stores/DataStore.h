@@ -19,4 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@protocol DataStoreDelegate <NSObject>
+
+@property (nonatomic, strong) id <DataStore> dataStore;
+
+@end
+
 NS_ASSUME_NONNULL_END

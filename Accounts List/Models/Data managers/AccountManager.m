@@ -34,18 +34,5 @@
     }
     return self;
 }
-
-#pragma mark - DataStoreDelegate
-
-- (void)saveChangesWithCompletion:(CompletionHandler)handler {
-    [self.dataStore saveDataWithCompletion:^(BOOL succeeded, NSError *error) {
-        if (!succeeded) {
-            NSLog(@"Account manager - Failed save changes: %@", error);
-        }
-        if (handler) {
-            handler(succeeded, error);
-        }
-    }];
-}
-
+ 
 @end

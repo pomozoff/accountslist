@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260E067F1BB189C300C4D225 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 260E067C1BB189C300C4D225 /* Account.m */; settings = {ASSET_TAGS = (); }; };
+		260E06851BB189CD00C4D225 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 260E06821BB189CD00C4D225 /* Service.m */; settings = {ASSET_TAGS = (); }; };
+		260E06861BB189CD00C4D225 /* Service+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 260E06841BB189CD00C4D225 /* Service+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		260E068B1BB18F9D00C4D225 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 260E068A1BB18F9D00C4D225 /* main.m */; settings = {ASSET_TAGS = (); }; };
+		260E068D1BB18FE100C4D225 /* Account+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 260E067E1BB189C300C4D225 /* Account+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		269BC6B61BAC4829005A1DA3 /* AccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BC6B51BAC4829005A1DA3 /* AccountTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		269BC6C11BB03381005A1DA3 /* AccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BC6C01BB03381005A1DA3 /* AccountTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		269BC6C41BB16692005A1DA3 /* ServicesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BC6C31BB16692005A1DA3 /* ServicesCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
-		26BD116A1BABFCDA005F13B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11691BABFCDA005F13B2 /* main.m */; };
+		269BC6C81BB17C07005A1DA3 /* ServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BC6C71BB17C07005A1DA3 /* ServiceManager.m */; settings = {ASSET_TAGS = (); }; };
+		269BC6CB1BB17E9C005A1DA3 /* ServiceCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BC6CA1BB17E9C005A1DA3 /* ServiceCoreDataManager.m */; settings = {ASSET_TAGS = (); }; };
 		26BD116D1BABFCDA005F13B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD116C1BABFCDA005F13B2 /* AppDelegate.m */; };
 		26BD11731BABFCDA005F13B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BD11711BABFCDA005F13B2 /* Main.storyboard */; };
 		26BD11751BABFCDA005F13B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26BD11741BABFCDA005F13B2 /* Assets.xcassets */; };
@@ -21,8 +27,6 @@
 		26BD11A31BABFE70005F13B2 /* Typhoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BD11A21BABFE70005F13B2 /* Typhoon.framework */; settings = {ASSET_TAGS = (); }; };
 		26BD11A71BABFEA0005F13B2 /* Typhoon.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26BD11A41BABFE7E005F13B2 /* Typhoon.framework.dSYM */; };
 		26BD11B61BAC0BA4005F13B2 /* CommonModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11B41BAC0BA4005F13B2 /* CommonModel.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		26BD11BD1BAC0BF5005F13B2 /* Account+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11BA1BAC0BF5005F13B2 /* Account+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		26BD11BE1BAC0BF5005F13B2 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11BC1BAC0BF5005F13B2 /* Account.m */; settings = {ASSET_TAGS = (); }; };
 		26BD11C21BAC0CEF005F13B2 /* CoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11C11BAC0CEF005F13B2 /* CoreDataStore.m */; settings = {ASSET_TAGS = (); }; };
 		26BD11C61BAC1025005F13B2 /* ErrorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD11C51BAC1025005F13B2 /* ErrorHelper.m */; settings = {ASSET_TAGS = (); }; };
 		26BD11CB1BAC17E2005F13B2 /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 26BD11CA1BAC17E2005F13B2 /* Warnings.xcconfig */; settings = {ASSET_TAGS = (); }; };
@@ -61,43 +65,52 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		260E067B1BB189C300C4D225 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = "Data store/Managed objects/Account.h"; sourceTree = "<group>"; };
+		260E067C1BB189C300C4D225 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Account.m; path = "Data store/Managed objects/Account.m"; sourceTree = "<group>"; };
+		260E067D1BB189C300C4D225 /* Account+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Account+CoreDataProperties.h"; path = "Data store/Managed objects/Account+CoreDataProperties.h"; sourceTree = "<group>"; };
+		260E067E1BB189C300C4D225 /* Account+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Account+CoreDataProperties.m"; path = "Data store/Managed objects/Account+CoreDataProperties.m"; sourceTree = "<group>"; };
+		260E06811BB189CD00C4D225 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Service.h; path = "Data store/Managed objects/Service.h"; sourceTree = "<group>"; };
+		260E06821BB189CD00C4D225 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Service.m; path = "Data store/Managed objects/Service.m"; sourceTree = "<group>"; };
+		260E06831BB189CD00C4D225 /* Service+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Service+CoreDataProperties.h"; path = "Data store/Managed objects/Service+CoreDataProperties.h"; sourceTree = "<group>"; };
+		260E06841BB189CD00C4D225 /* Service+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Service+CoreDataProperties.m"; path = "Data store/Managed objects/Service+CoreDataProperties.m"; sourceTree = "<group>"; };
+		260E068A1BB18F9D00C4D225 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Application/main.m; sourceTree = "<group>"; };
 		269BC6B41BAC4829005A1DA3 /* AccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTableViewController.h; sourceTree = "<group>"; };
 		269BC6B51BAC4829005A1DA3 /* AccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTableViewController.m; sourceTree = "<group>"; };
 		269BC6BF1BB03381005A1DA3 /* AccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTableViewCell.h; sourceTree = "<group>"; };
 		269BC6C01BB03381005A1DA3 /* AccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTableViewCell.m; sourceTree = "<group>"; };
 		269BC6C21BB16692005A1DA3 /* ServicesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicesCollectionViewController.h; sourceTree = "<group>"; };
 		269BC6C31BB16692005A1DA3 /* ServicesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicesCollectionViewController.m; sourceTree = "<group>"; };
+		269BC6C51BB17A65005A1DA3 /* DataManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManagement.h; sourceTree = "<group>"; };
+		269BC6C61BB17C07005A1DA3 /* ServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceManager.h; sourceTree = "<group>"; };
+		269BC6C71BB17C07005A1DA3 /* ServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceManager.m; sourceTree = "<group>"; };
+		269BC6C91BB17E9C005A1DA3 /* ServiceCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCoreDataManager.h; sourceTree = "<group>"; };
+		269BC6CA1BB17E9C005A1DA3 /* ServiceCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCoreDataManager.m; sourceTree = "<group>"; };
 		26BD11651BABFCDA005F13B2 /* Accounts List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Accounts List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		26BD11691BABFCDA005F13B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		26BD116B1BABFCDA005F13B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		26BD116C1BABFCDA005F13B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		26BD116B1BABFCDA005F13B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Application/AppDelegate.h; sourceTree = "<group>"; };
+		26BD116C1BABFCDA005F13B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Application/AppDelegate.m; sourceTree = "<group>"; };
 		26BD11721BABFCDA005F13B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26BD11741BABFCDA005F13B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26BD11771BABFCDA005F13B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		26BD11791BABFCDA005F13B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26BD11791BABFCDA005F13B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Application/Info.plist; sourceTree = "<group>"; };
 		26BD117E1BABFCDA005F13B2 /* Accounts ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Accounts ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BD11821BABFCDA005F13B2 /* Accounts_ListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Accounts_ListTests.m; sourceTree = "<group>"; };
 		26BD11841BABFCDA005F13B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26BD11891BABFCDA005F13B2 /* Accounts ListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Accounts ListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BD118D1BABFCDA005F13B2 /* Accounts_ListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Accounts_ListUITests.m; sourceTree = "<group>"; };
 		26BD118F1BABFCDA005F13B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26BD119E1BABFE0C005F13B2 /* AccountsListAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsListAssembly.h; sourceTree = "<group>"; };
-		26BD119F1BABFE0C005F13B2 /* AccountsListAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsListAssembly.m; sourceTree = "<group>"; };
+		26BD119E1BABFE0C005F13B2 /* AccountsListAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountsListAssembly.h; path = Assembly/AccountsListAssembly.h; sourceTree = "<group>"; };
+		26BD119F1BABFE0C005F13B2 /* AccountsListAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountsListAssembly.m; path = Assembly/AccountsListAssembly.m; sourceTree = "<group>"; };
 		26BD11A21BABFE70005F13B2 /* Typhoon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Typhoon.framework; path = Carthage/Build/iOS/Typhoon.framework; sourceTree = "<group>"; };
 		26BD11A41BABFE7E005F13B2 /* Typhoon.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Typhoon.framework.dSYM; path = Carthage/Build/iOS/Typhoon.framework.dSYM; sourceTree = "<group>"; };
-		26BD11AF1BAC091E005F13B2 /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountManager.h; path = Protocols/AccountManager.h; sourceTree = "<group>"; };
+		26BD11AF1BAC091E005F13B2 /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
 		26BD11B51BAC0BA4005F13B2 /* CommonModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CommonModel.xcdatamodel; sourceTree = "<group>"; };
-		26BD11B91BAC0BF5005F13B2 /* Account+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Account+CoreDataProperties.h"; sourceTree = "<group>"; };
-		26BD11BA1BAC0BF5005F13B2 /* Account+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Account+CoreDataProperties.m"; sourceTree = "<group>"; };
-		26BD11BB1BAC0BF5005F13B2 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
-		26BD11BC1BAC0BF5005F13B2 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
-		26BD11C01BAC0CEF005F13B2 /* CoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStore.h; sourceTree = "<group>"; };
-		26BD11C11BAC0CEF005F13B2 /* CoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStore.m; sourceTree = "<group>"; };
-		26BD11C41BAC1025005F13B2 /* ErrorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorHelper.h; sourceTree = "<group>"; };
-		26BD11C51BAC1025005F13B2 /* ErrorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorHelper.m; sourceTree = "<group>"; };
+		26BD11C01BAC0CEF005F13B2 /* CoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataStore.h; path = "Data store/Stores/CoreDataStore.h"; sourceTree = "<group>"; };
+		26BD11C11BAC0CEF005F13B2 /* CoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataStore.m; path = "Data store/Stores/CoreDataStore.m"; sourceTree = "<group>"; };
+		26BD11C41BAC1025005F13B2 /* ErrorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorHelper.h; path = Helpers/ErrorHelper.h; sourceTree = "<group>"; };
+		26BD11C51BAC1025005F13B2 /* ErrorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ErrorHelper.m; path = Helpers/ErrorHelper.m; sourceTree = "<group>"; };
 		26BD11C71BAC137F005F13B2 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		26BD11C81BAC1593005F13B2 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataStore.h; path = Protocols/DataStore.h; sourceTree = "<group>"; };
-		26BD11CA1BAC17E2005F13B2 /* Warnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+		26BD11C81BAC1593005F13B2 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataStore.h; path = "Data store/Stores/DataStore.h"; sourceTree = "<group>"; };
+		26BD11CA1BAC17E2005F13B2 /* Warnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Warnings.xcconfig; path = Application/Warnings.xcconfig; sourceTree = "<group>"; };
 		26BD11CC1BAC3481005F13B2 /* AccountCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCoreDataManager.h; sourceTree = "<group>"; };
 		26BD11CD1BAC3481005F13B2 /* AccountCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCoreDataManager.m; sourceTree = "<group>"; };
 		26BD11CF1BAC3AC6005F13B2 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
@@ -137,7 +150,7 @@
 				269BC6C21BB16692005A1DA3 /* ServicesCollectionViewController.h */,
 				269BC6C31BB16692005A1DA3 /* ServicesCollectionViewController.m */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		269BC6BE1BB03371005A1DA3 /* Views */ = {
@@ -146,7 +159,7 @@
 				269BC6BF1BB03381005A1DA3 /* AccountTableViewCell.h */,
 				269BC6C01BB03381005A1DA3 /* AccountTableViewCell.m */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		26BD115C1BABFCDA005F13B2 = {
@@ -181,17 +194,8 @@
 				26BD119D1BABFDEA005F13B2 /* Assembly */,
 				26BD119B1BABFCFE005F13B2 /* Application */,
 				26BD119C1BABFD07005F13B2 /* Resources */,
-				26BD11681BABFCDA005F13B2 /* Supporting Files */,
 			);
 			path = "Accounts List";
-			sourceTree = "<group>";
-		};
-		26BD11681BABFCDA005F13B2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				26BD11691BABFCDA005F13B2 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		26BD11811BABFCDA005F13B2 /* Accounts ListTests */ = {
@@ -217,6 +221,7 @@
 			children = (
 				26BD116B1BABFCDA005F13B2 /* AppDelegate.h */,
 				26BD116C1BABFCDA005F13B2 /* AppDelegate.m */,
+				260E068A1BB18F9D00C4D225 /* main.m */,
 				26BD11791BABFCDA005F13B2 /* Info.plist */,
 				26BD11CA1BAC17E2005F13B2 /* Warnings.xcconfig */,
 			);
@@ -255,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				26BD11C71BAC137F005F13B2 /* Common.h */,
+				269BC6C51BB17A65005A1DA3 /* DataManagement.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -265,7 +271,7 @@
 				26BD11C91BAC161F005F13B2 /* Data managers */,
 				26BD11B31BAC0B86005F13B2 /* Data store */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		26BD11B31BAC0B86005F13B2 /* Data store */ = {
@@ -284,15 +290,20 @@
 				26BD11B41BAC0BA4005F13B2 /* CommonModel.xcdatamodeld */,
 			);
 			name = "Data models";
+			path = "Data store/Data models";
 			sourceTree = "<group>";
 		};
 		26BD11B81BAC0BDE005F13B2 /* Managed objects */ = {
 			isa = PBXGroup;
 			children = (
-				26BD11B91BAC0BF5005F13B2 /* Account+CoreDataProperties.h */,
-				26BD11BA1BAC0BF5005F13B2 /* Account+CoreDataProperties.m */,
-				26BD11BB1BAC0BF5005F13B2 /* Account.h */,
-				26BD11BC1BAC0BF5005F13B2 /* Account.m */,
+				260E067B1BB189C300C4D225 /* Account.h */,
+				260E067C1BB189C300C4D225 /* Account.m */,
+				260E067D1BB189C300C4D225 /* Account+CoreDataProperties.h */,
+				260E067E1BB189C300C4D225 /* Account+CoreDataProperties.m */,
+				260E06811BB189CD00C4D225 /* Service.h */,
+				260E06821BB189CD00C4D225 /* Service.m */,
+				260E06831BB189CD00C4D225 /* Service+CoreDataProperties.h */,
+				260E06841BB189CD00C4D225 /* Service+CoreDataProperties.m */,
 			);
 			name = "Managed objects";
 			sourceTree = "<group>";
@@ -323,8 +334,12 @@
 				26BD11CF1BAC3AC6005F13B2 /* AccountManager.m */,
 				26BD11CC1BAC3481005F13B2 /* AccountCoreDataManager.h */,
 				26BD11CD1BAC3481005F13B2 /* AccountCoreDataManager.m */,
+				269BC6C61BB17C07005A1DA3 /* ServiceManager.h */,
+				269BC6C71BB17C07005A1DA3 /* ServiceManager.m */,
+				269BC6C91BB17E9C005A1DA3 /* ServiceCoreDataManager.h */,
+				269BC6CA1BB17E9C005A1DA3 /* ServiceCoreDataManager.m */,
 			);
-			name = "Data managers";
+			path = "Data managers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +411,7 @@
 				TargetAttributes = {
 					26BD11641BABFCDA005F13B2 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = Y24464MUL3;
 					};
 					26BD117D1BABFCDA005F13B2 = {
 						CreatedOnToolsVersion = 7.0;
@@ -477,19 +493,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26BD11BD1BAC0BF5005F13B2 /* Account+CoreDataProperties.m in Sources */,
-				26BD11BE1BAC0BF5005F13B2 /* Account.m in Sources */,
 				26BD11C21BAC0CEF005F13B2 /* CoreDataStore.m in Sources */,
 				26BD11B61BAC0BA4005F13B2 /* CommonModel.xcdatamodeld in Sources */,
 				26BD116D1BABFCDA005F13B2 /* AppDelegate.m in Sources */,
+				260E06851BB189CD00C4D225 /* Service.m in Sources */,
+				260E067F1BB189C300C4D225 /* Account.m in Sources */,
+				269BC6C81BB17C07005A1DA3 /* ServiceManager.m in Sources */,
+				260E068D1BB18FE100C4D225 /* Account+CoreDataProperties.m in Sources */,
 				269BC6C11BB03381005A1DA3 /* AccountTableViewCell.m in Sources */,
 				26BD11C61BAC1025005F13B2 /* ErrorHelper.m in Sources */,
 				26BD11CE1BAC3481005F13B2 /* AccountCoreDataManager.m in Sources */,
 				269BC6C41BB16692005A1DA3 /* ServicesCollectionViewController.m in Sources */,
 				269BC6B61BAC4829005A1DA3 /* AccountTableViewController.m in Sources */,
 				26BD11A01BABFE0C005F13B2 /* AccountsListAssembly.m in Sources */,
-				26BD116A1BABFCDA005F13B2 /* main.m in Sources */,
 				26BD11D01BAC3AC6005F13B2 /* AccountManager.m in Sources */,
+				269BC6CB1BB17E9C005A1DA3 /* ServiceCoreDataManager.m in Sources */,
+				260E06861BB189CD00C4D225 /* Service+CoreDataProperties.m in Sources */,
+				260E068B1BB18F9D00C4D225 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,14 +651,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Accounts List/Info.plist";
+				INFOPLIST_FILE = "Accounts List/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.akademon.Accounts-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -646,14 +670,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Accounts List/Info.plist";
+				INFOPLIST_FILE = "Accounts List/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.akademon.Accounts-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

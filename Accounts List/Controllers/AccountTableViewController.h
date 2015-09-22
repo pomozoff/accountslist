@@ -8,8 +8,6 @@
 
 @import UIKit;
 
-#import "AccountManager.h"
-
 @interface AccountTableViewController : UITableViewController
 
 @end

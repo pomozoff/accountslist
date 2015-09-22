@@ -250,6 +250,9 @@ static NSString * const kDataBaseManagerErrorDomain = @"CoreDataStoreErrorDomain
                                                       URL:storeSqliteURL
                                                   options:optionsDefault
                                                     error:error];
+        if (persistentStore) {
+            NSLog(@"Migrated successfully");
+        }
     }
     return persistentStore;
 }

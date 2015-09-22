@@ -11,7 +11,7 @@
 
 static NSString * const kCellReuseIdentifier = @"Account Cell";
 
-@interface AccountTableViewController () <AccountManagerDelegate, AccountDataPresentable>
+@interface AccountTableViewController () <AccountManagerDelegate, TableDataPresenter>
 
 @end
 

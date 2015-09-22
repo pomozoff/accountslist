@@ -35,7 +35,7 @@ typedef void (^FetchCompletionHandler)(NSArray <id <Account>> * __nullable array
 
 @end
 
-@protocol AccountManager <NSObject>
+@protocol DataFetcher <NSObject>
 
 - (void)fetchAccountsWithCompletion:(FetchCompletionHandler)handler;
 - (id <Account>)objectAtIndexPath:(NSIndexPath *)indexPath;
@@ -52,7 +52,7 @@ typedef void (^FetchCompletionHandler)(NSArray <id <Account>> * __nullable array
 
 @end
 
-@protocol AccountDataPresentable <NSObject>
+@protocol TableDataPresenter <NSObject>
 
 - (void)reloadData;
 - (void)willChangeContent;
@@ -66,15 +66,15 @@ typedef void (^FetchCompletionHandler)(NSArray <id <Account>> * __nullable array
 
 @end
 
-@protocol AccountDataPresenter <NSObject>
+@protocol TableDataPresenterDelegate <NSObject>
 
-@property (nonatomic, strong) id <AccountDataPresentable> presenter;
+@property (nonatomic, strong) id <TableDataPresenter> presenter;
 
 @end
 
 @protocol AccountManagerDelegate <NSObject>
 
-@property (nonnull, strong, nonatomic) id <DataStoreDelegate, AccountManager, TableDataSource, AccountDataPresenter> accountManager;
+@property (nonnull, strong, nonatomic) id <DataStoreDelegate, DataFetcher, TableDataSource, TableDataPresenterDelegate> accountManager;
 
 @end
 

@@ -20,7 +20,7 @@ typedef NS_ENUM(NSUInteger, AccountCoreDataManagerError) {
 static NSString * const kAccountCoreDataManagerErrorDomain = @"AccountCoreDataManagerErrorDomain";
 static NSUInteger const kBatchSize = 20;
 
-@interface AccountCoreDataManager () <NSFetchedResultsControllerDelegate>
+@interface AccountCoreDataManager () <NSFetchedResultsControllerDelegate, DataFetcher, TableDataSource, TableDataPresenterDelegate>
 
 @property (nonatomic, strong) CoreDataStore *dataStore;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;

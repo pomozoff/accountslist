@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol DataStore <NSObject>
 
-- (void)setupWithCompletionHandler:(CompletionHandler)handler;
-- (void)saveDataWithCompletionHandler:(CompletionHandler)handler;
+- (void)setupWithCompletion:(CompletionHandler)handler;
+- (void)saveDataWithCompletion:(CompletionHandler)handler;
 
 @end
 

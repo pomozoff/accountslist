@@ -10,6 +10,6 @@
 
 #import "AccountManager.h"
 
-@interface AccountCoreDataManager : AccountManager <AccountManager, TableDataSource, AccountDataPresenter>
+@interface AccountCoreDataManager : AccountManager
 
 @end

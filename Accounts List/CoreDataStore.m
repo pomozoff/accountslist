@@ -57,7 +57,7 @@ typedef NS_ENUM(NSUInteger, CoreDataStoreError) {
 
 #pragma mark - Setup Core Data stack
 
-- (void)setupWithCompletionHandler:(CompletionHandler)handler {
+- (void)setupWithCompletion:(CompletionHandler)handler {
     if (_writerManagedObjectContext) {
         return;
     }
@@ -109,12 +109,12 @@ typedef NS_ENUM(NSUInteger, CoreDataStoreError) {
         }
     });
 }
-- (void)saveDataWithCompletionHandler:(CompletionHandler)handler {
+- (void)saveDataWithCompletion:(CompletionHandler)handler {
     // Always start from the main thread
     if (![NSThread isMainThread]) {
-        __weak CoreDataStore *weakSelf = self;
+        __weak typeof(self) weakSelf = self;
         dispatch_sync(dispatch_get_main_queue(), ^{
-            [weakSelf saveDataWithCompletionHandler:handler];
+            [weakSelf saveDataWithCompletion:handler];
         });
         return;
     }

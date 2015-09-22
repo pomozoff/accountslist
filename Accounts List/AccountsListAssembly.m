@@ -27,7 +27,7 @@
 
 #pragma mark - Private
 
-- (id <AccountManager>)accountManager {
+- (id <DataFetcher>)accountManager {
     return [TyphoonDefinition withClass:[AccountCoreDataManager class] configuration:^(TyphoonDefinition *definition) {
         [definition injectProperty:@selector(dataStore) with:[self dataStore]];
         definition.scope = TyphoonScopeSingleton;

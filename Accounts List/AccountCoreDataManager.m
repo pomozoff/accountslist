@@ -37,7 +37,7 @@ static NSUInteger const kBatchSize = 20;
 - (void)setDataStore:(CoreDataStore *)dataStore {
     if (_dataStore != dataStore) {
         _dataStore = dataStore;
-        [_dataStore setupWithCompletionHandler:^(BOOL succeeded, NSError *error) {
+        [_dataStore setupWithCompletion:^(BOOL succeeded, NSError *error) {
             if (succeeded) {
                 NSFetchedResultsController *frc = [self fetchedResultsControllerWithManagedObjectContext:self.dataStore.mainQueueManagedObjectContext];
                 [self updateFetchedResultsController:frc withCompletionHandler:^(BOOL innerSucceeded, NSError *innerError) {

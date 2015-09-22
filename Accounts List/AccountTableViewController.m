@@ -20,6 +20,7 @@ static NSString * const kCellReuseIdentifier = @"Account Cell";
 #pragma mark - Properties
 
 @synthesize accountManager = _accountManager;
+@synthesize updateOperation = _updateOperation;
 
 #pragma mark - Lifecycle
 
@@ -70,16 +71,30 @@ static NSString * const kCellReuseIdentifier = @"Account Cell";
 }
 - (void)willChangeContent {
     [self.tableView beginUpdates];
+    self.updateOperation = [[NSBlockOperation alloc] init];
+
+    __weak UITableView *weakTableView = self.tableView;
+    self.updateOperation.completionBlock = ^{
+        [weakTableView endUpdates];
+    };
 }
 - (void)didChangeSectionatIndex:(NSUInteger)sectionIndex
-                  forChangeType:(TableChangeType)type {
+                  forChangeType:(TableChangeType)type
+{
+    __weak UITableView *weakTableView = self.tableView;
     switch(type) {
-        case TableChangeInsert:
-            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+        case TableChangeInsert: {
+            [self.updateOperation addExecutionBlock:^{
+                [weakTableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            }];
             break;
-        case TableChangeDelete:
-            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+        }
+        case TableChangeDelete: {
+            [self.updateOperation addExecutionBlock:^{
+                [weakTableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            }];
             break;
+        }
         default:
             break;
     }
@@ -87,27 +102,41 @@ static NSString * const kCellReuseIdentifier = @"Account Cell";
 - (void)didChangeObject:(id)anObject
             atIndexPath:(NSIndexPath *)indexPath
           forChangeType:(TableChangeType)type
-           newIndexPath:(NSIndexPath *)newIndexPath {
+           newIndexPath:(NSIndexPath *)newIndexPath
+{
+    __weak UITableView *weakTableView = self.tableView;
     switch(type) {
-        case TableChangeInsert:
-            [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+        case TableChangeInsert: {
+            [self.updateOperation addExecutionBlock:^{
+                [weakTableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            }];
             break;
-        case TableChangeDelete:
-            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
+        case TableChangeDelete: {
+            [self.updateOperation addExecutionBlock:^{
+                [weakTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            }];
             break;
-        case TableChangeUpdate:
-            [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
+        case TableChangeUpdate: {
+            [self.updateOperation addExecutionBlock:^{
+                [weakTableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            }];
             break;
-        case TableChangeMove:
-            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
+        case TableChangeMove: {
+            [self.updateOperation addExecutionBlock:^{
+                [weakTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+                [weakTableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            }];
             break;
+        }
         default:
             break;
     }
 }
 - (void)didChangeContent {
-    [self.tableView endUpdates];
+    [self.updateOperation start];
 }
 
 #pragma mark - Private

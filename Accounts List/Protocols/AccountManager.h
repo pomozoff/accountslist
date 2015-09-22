@@ -51,6 +51,8 @@ typedef enum : NSUInteger {
 
 @protocol TableDataPresenter <NSObject>
 
+@property (nonatomic, strong) NSBlockOperation *updateOperation;
+
 - (void)reloadData;
 - (void)willChangeContent;
 - (void)didChangeSectionatIndex:(NSUInteger)sectionIndex

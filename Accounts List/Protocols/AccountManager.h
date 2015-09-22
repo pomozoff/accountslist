@@ -26,8 +26,6 @@ typedef enum : NSUInteger {
 
 @end
 
-typedef void (^FetchCompletionHandler)(NSArray <id <Account>> * __nullable array, NSError * __nullable error);
-
 @protocol DataStoreDelegate <NSObject>
 
 @property (nonatomic, strong, readonly) id <DataStore> dataStore;

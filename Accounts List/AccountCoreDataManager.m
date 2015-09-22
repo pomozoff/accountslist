@@ -104,9 +104,6 @@ static NSUInteger const kBatchSize = 20;
 
 #pragma mark - AccountManager
 
-- (void)fetchAccountsWithCompletion:(FetchCompletionHandler)handler {
-    
-}
 - (id <Account>)objectAtIndexPath:(NSIndexPath *)indexPath {
     Account *account = [self.fetchedResultsController objectAtIndexPath:indexPath];
     return account;

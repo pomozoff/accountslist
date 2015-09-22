@@ -37,7 +37,6 @@ typedef void (^FetchCompletionHandler)(NSArray <id <Account>> * __nullable array
 
 @protocol DataFetcher <NSObject>
 
-- (void)fetchAccountsWithCompletion:(FetchCompletionHandler)handler;
 - (id <Account>)objectAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

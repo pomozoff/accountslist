@@ -145,14 +145,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		260E06941BB2A72400C4D225 /* Data stores */ = {
+		260E06941BB2A72400C4D225 /* Data sources */ = {
 			isa = PBXGroup;
 			children = (
 				260E068E1BB2936300C4D225 /* CoreDataSource.h */,
 				260E068F1BB2936300C4D225 /* CoreDataSource.m */,
 			);
-			name = "Data stores";
-			path = "Data sources";
+			name = "Data sources";
+			path = "Accounts List/Models/Data/Data sources";
+			sourceTree = SOURCE_ROOT;
+		};
+		260E06951BB2CAD800C4D225 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				26BD11C91BAC161F005F13B2 /* Data managers */,
+				26BD11B71BAC0BCF005F13B2 /* Data models */,
+				260E06941BB2A72400C4D225 /* Data sources */,
+				26BD11BF1BAC0CBF005F13B2 /* Data stores */,
+				26BD11B81BAC0BDE005F13B2 /* Managed objects */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		260E06961BB2CB7400C4D225 /* Loaders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Loaders;
 			sourceTree = "<group>";
 		};
 		269BC6B31BAC47DD005A1DA3 /* Controllers */ = {
@@ -281,11 +300,8 @@
 		26BD11B21BAC0B66005F13B2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				26BD11C91BAC161F005F13B2 /* Data managers */,
-				26BD11B81BAC0BDE005F13B2 /* Managed objects */,
-				26BD11B71BAC0BCF005F13B2 /* Data models */,
-				260E06941BB2A72400C4D225 /* Data stores */,
-				26BD11BF1BAC0CBF005F13B2 /* Data stores */,
+				260E06951BB2CAD800C4D225 /* Data */,
+				260E06961BB2CB7400C4D225 /* Loaders */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -295,8 +311,9 @@
 			children = (
 				26BD11B41BAC0BA4005F13B2 /* CommonModel.xcdatamodeld */,
 			);
-			path = "Data models";
-			sourceTree = "<group>";
+			name = "Data models";
+			path = "Accounts List/Models/Data/Data models";
+			sourceTree = SOURCE_ROOT;
 		};
 		26BD11B81BAC0BDE005F13B2 /* Managed objects */ = {
 			isa = PBXGroup;
@@ -320,8 +337,9 @@
 				26BD11C01BAC0CEF005F13B2 /* CoreDataStore.h */,
 				26BD11C11BAC0CEF005F13B2 /* CoreDataStore.m */,
 			);
-			path = "Data stores";
-			sourceTree = "<group>";
+			name = "Data stores";
+			path = "Accounts List/Models/Data/Data stores";
+			sourceTree = SOURCE_ROOT;
 		};
 		26BD11C31BAC1008005F13B2 /* Helpers */ = {
 			isa = PBXGroup;
@@ -344,8 +362,9 @@
 				269BC6C91BB17E9C005A1DA3 /* ServiceCoreDataManager.h */,
 				269BC6CA1BB17E9C005A1DA3 /* ServiceCoreDataManager.m */,
 			);
-			path = "Data managers";
-			sourceTree = "<group>";
+			name = "Data managers";
+			path = "Accounts List/Models/Data/Data managers";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 

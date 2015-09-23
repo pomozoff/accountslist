@@ -8,10 +8,6 @@
 
 #import "AccountManager.h"
 
-@interface AccountManager ()
-
-@end
-
 @implementation AccountManager
 
 #pragma mark - Properties

@@ -28,7 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ServiceManagerDelegate <NSObject>
 
-@property (nonnull, strong, nonatomic) id <ServiceDataFetcher, CollectionDataSource, DataPresenterDelegate> serviceManager;
+@property (nonnull, strong, nonatomic) id <ServiceDataFetcher> serviceManager;
+@property (nonnull, strong, nonatomic) id <CommonDataSource, DataPresenterDelegate> commonDataSource;
 
 @end
 

@@ -8,33 +8,54 @@
 
 #import "AccountsListAssembly.h"
 #import "CoreDataStore.h"
+#import "CoreDataSource.h"
 #import "AccountCoreDataManager.h"
 #import "ServiceCoreDataManager.h"
 
+@interface AccountsListAssembly ()
+
+@property (nonatomic, strong) CoreDataSource *coreDataSource;
+
+@end
+
 @implementation AccountsListAssembly
+
+- (CoreDataSource *)coreDataSource {
+    if (!_coreDataSource) {
+        _coreDataSource = [TyphoonDefinition withClass:[CoreDataSource class]];
+    }
+    return _coreDataSource;
+}
 
 #pragma mark - Public
 
 - (AppDelegate *)appDelegate {
     return [TyphoonDefinition withClass:[AppDelegate class] configuration:^(TyphoonDefinition *definition) {
-        [definition injectProperty:@selector(dataStore) with:[self dataStore]];
+        [definition injectProperty:@selector(dataStore) with:[self dataStoreMaker]];
     }];
 }
 - (AccountTableViewController *)accountTableViewController {
     return [TyphoonDefinition withClass:[AccountTableViewController class] configuration:^(TyphoonDefinition *definition) {
-        [definition injectProperty:@selector(accountManager) with:[self accountManager]];
+        [definition injectProperty:@selector(accountManager) with:[self accountManagerMaker]];
+        [definition injectProperty:@selector(commonDataSource) with:[self commonDataSourceMaker]];
     }];
 }
 
 #pragma mark - Private
 
-- (id <AccountDataFetcher>)accountManager {
+- (id <AccountDataFetcher>)accountManagerMaker {
     return [TyphoonDefinition withClass:[AccountCoreDataManager class] configuration:^(TyphoonDefinition *definition) {
-        [definition injectProperty:@selector(dataStore) with:[self dataStore]];
-        definition.scope = TyphoonScopeSingleton;
+        [definition injectProperty:@selector(dataStore) with:[self dataStoreMaker]];
+        [definition injectProperty:@selector(dataSourceDelegate) with:[self dataSourceDelegateMaker]];
     }];
 }
-- (id <DataStore>)dataStore {
+- (id <CommonDataSource, DataPresenterDelegate>)commonDataSourceMaker {
+    return self.coreDataSource;
+}
+- (id <CoreDataSourceDelegate>)dataSourceDelegateMaker {
+    return self.coreDataSource;
+}
+- (id <DataStore>)dataStoreMaker {
     return [TyphoonDefinition withClass:[CoreDataStore class] configuration:^(TyphoonDefinition *definition) {
         [definition useInitializer:@selector(initWithModelName:) parameters:^(TyphoonMethod *initializer) {
             [initializer injectParameterWith:@"CommonModel"];

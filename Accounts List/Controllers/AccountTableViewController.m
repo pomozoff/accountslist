@@ -20,14 +20,15 @@ static NSString * const kCellReuseIdentifier = @"Account Cell";
 
 #pragma mark - Properties
 
-@synthesize accountManager = _accountManager;
 @synthesize updateOperation = _updateOperation;
+@synthesize accountManager = _accountManager;
+@synthesize commonDataSource = _commonDataSource;
 
 #pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.accountManager.presenter = self;
+    self.commonDataSource.presenter = self;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -35,7 +36,6 @@ static NSString * const kCellReuseIdentifier = @"Account Cell";
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -44,19 +44,19 @@ static NSString * const kCellReuseIdentifier = @"Account Cell";
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [self.accountManager tableNumberOfSections];
+    return [self.commonDataSource numberOfSections];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.accountManager tableNumberOfRowsInSection:section];
+    return [self.commonDataSource numberOfItemsInSection:section];
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [self.accountManager tableTitleForHeaderInSection:section];
+    return [self.commonDataSource titleForHeaderInSection:section];
 }
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
-    return [self.accountManager tableSectionForSectionIndexTitle:title atIndex:index];
+    return [self.commonDataSource sectionForSectionIndexTitle:title atIndex:index];
 }
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    return [self.accountManager tableSectionIndexTitles];
+    return [self.commonDataSource sectionIndexTitles];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AccountTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellReuseIdentifier forIndexPath:indexPath];

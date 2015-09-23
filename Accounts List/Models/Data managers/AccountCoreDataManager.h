@@ -7,7 +7,10 @@
 //
 
 #import "AccountManager.h"
+#import "CoreDataSource.h"
 
 @interface AccountCoreDataManager : AccountManager
+
+@property (nonnull, nonatomic, strong) id <CoreDataSourceDelegate> dataSourceDelegate;
 
 @end

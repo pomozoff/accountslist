@@ -7,7 +7,10 @@
 //
 
 #import "ServiceManager.h"
+#import "CoreDataSource.h"
 
 @interface ServiceCoreDataManager : ServiceManager
+
+@property (nonnull, nonatomic, strong) id <CoreDataSourceDelegate> dataSourceDelegate;
 
 @end

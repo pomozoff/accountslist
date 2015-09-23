@@ -7,8 +7,6 @@
 //
 
 #import "ServiceManager.h"
-#import "CoreDataStore.h"
-#import "ServiceCoreDataManager.h"
 
 @implementation ServiceManager
 

@@ -28,7 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol AccountManagerDelegate <NSObject>
 
-@property (nonnull, strong, nonatomic) id <AccountDataFetcher, TableDataSource, DataPresenterDelegate> accountManager;
+@property (nonnull, strong, nonatomic) id <AccountDataFetcher> accountManager;
+@property (nonnull, strong, nonatomic) id <CommonDataSource, DataPresenterDelegate> commonDataSource;
 
 @end
 

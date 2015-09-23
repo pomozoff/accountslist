@@ -18,23 +18,13 @@ typedef enum : NSUInteger {
     TableChangeUpdate = 4
 } TableChangeType;
 
-@protocol TableDataSource <NSObject>
+@protocol CommonDataSource <NSObject>
 
-- (NSInteger)tableNumberOfSections;
-- (NSInteger)tableNumberOfRowsInSection:(NSInteger)section;
-- (NSString *)tableTitleForHeaderInSection:(NSInteger)section;
-- (NSInteger)tableSectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index;
-- (NSArray *)tableSectionIndexTitles;
-
-@end
-
-@protocol CollectionDataSource <NSObject>
-
-- (NSInteger)tableNumberOfSections;
-- (NSInteger)tableNumberOfRowsInSection:(NSInteger)section;
-- (NSString *)tableTitleForHeaderInSection:(NSInteger)section;
-- (NSInteger)tableSectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index;
-- (NSArray *)tableSectionIndexTitles;
+- (NSInteger)numberOfSections;
+- (NSInteger)numberOfItemsInSection:(NSInteger)section;
+- (NSString *)titleForHeaderInSection:(NSInteger)section;
+- (NSInteger)sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index;
+- (NSArray *)sectionIndexTitles;
 
 @end
 

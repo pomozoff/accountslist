@@ -19,8 +19,9 @@ static NSString * const reuseIdentifier = @"Service Cell";
 
 #pragma mark - Properties
 
-@synthesize serviceManager = _serviceManager;
 @synthesize updateOperation = _updateOperation;
+@synthesize serviceManager = _serviceManager;
+@synthesize commonDataSource = _commonDataSource;
 
 #pragma mark - Lifecycle
 
@@ -53,12 +54,10 @@ static NSString * const reuseIdentifier = @"Service Cell";
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    //return [self.accountManager tableNumberOfSections];
-    return 0;
+    return [self.commonDataSource numberOfSections];
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    //return [self.accountManager numberOfItemsInSection:section];
-    return 0;
+    return [self.commonDataSource numberOfItemsInSection:section];
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];

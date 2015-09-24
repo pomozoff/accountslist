@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@protocol ServiceDataFetcher <NSObject>
+@protocol ServiceDataSource <NSObject>
 
 - (id <Service>)objectAtIndexPath:(NSIndexPath *)indexPath;
 
@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ServiceManagerDelegate <NSObject>
 
-@property (nonnull, strong, nonatomic) id <ServiceDataFetcher> serviceManager;
+@property (nonnull, strong, nonatomic) id <ServiceDataSource> serviceManager;
 @property (nonnull, strong, nonatomic) id <CommonDataSource, DataPresenterDelegate> commonDataSource;
 
 @end

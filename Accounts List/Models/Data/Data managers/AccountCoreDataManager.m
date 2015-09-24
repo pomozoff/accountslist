@@ -10,7 +10,7 @@
 #import "Account+CoreDataProperties.h"
 #import "CoreDataStore.h"
 
-@interface AccountCoreDataManager () <AccountDataFetcher>
+@interface AccountCoreDataManager () <AccountDataSource>
 
 @property (nonnull, nonatomic, strong) CoreDataStore *dataStore;
 
@@ -42,7 +42,7 @@ static NSUInteger const kBatchSize = 20;
     }
 }
 
-#pragma mark - DataFetcher
+#pragma mark - AccountDataSource
 
 - (id <Account>)objectAtIndexPath:(NSIndexPath *)indexPath {
     Account *account = [self.dataSourceDelegate objectAtIndexPath:indexPath];

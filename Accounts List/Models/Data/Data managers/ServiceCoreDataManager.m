@@ -10,7 +10,7 @@
 #import "Service+CoreDataProperties.h"
 #import "CoreDataStore.h"
 
-@interface ServiceCoreDataManager () <ServiceDataFetcher>
+@interface ServiceCoreDataManager () <ServiceDataSource>
 
 @property (nonatomic, strong) CoreDataStore *dataStore;
 
@@ -42,7 +42,7 @@ static NSUInteger const kBatchSize = 20;
     }
 }
 
-#pragma mark - DataFetcher
+#pragma mark - ServiceDataSource
 
 - (id <Service>)objectAtIndexPath:(NSIndexPath *)indexPath {
     Service *service = [self.dataSourceDelegate objectAtIndexPath:indexPath];

@@ -43,7 +43,7 @@
 
 #pragma mark - Private
 
-- (id <AccountDataFetcher>)accountManagerMaker {
+- (id <AccountDataSource>)accountManagerMaker {
     return [TyphoonDefinition withClass:[AccountCoreDataManager class] configuration:^(TyphoonDefinition *definition) {
         [definition injectProperty:@selector(dataStore) with:[self dataStoreMaker]];
         [definition injectProperty:@selector(dataSourceDelegate) with:[self dataSourceDelegateMaker]];

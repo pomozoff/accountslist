@@ -31,7 +31,7 @@
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     [self.dataStore saveDataWithCompletion:^(BOOL succeeded, NSError *error) {
         if (!succeeded) {
-            NSLog(@"Application resign active - Failed save changes: %@", error);
+            NSLog(@"Application resign active - Failed to save changes: %@", error);
         }
     }];
 }
@@ -40,7 +40,7 @@
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     [self.dataStore saveDataWithCompletion:^(BOOL succeeded, NSError *error) {
         if (!succeeded) {
-            NSLog(@"Application did enter background - Failed save changes: %@", error);
+            NSLog(@"Application did enter background - Failed to save changes: %@", error);
         }
     }];
 }
@@ -54,7 +54,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     [self.dataStore saveDataWithCompletion:^(BOOL succeeded, NSError *error) {
         if (!succeeded) {
-            NSLog(@"Application will terminate - Failed save changes: %@", error);
+            NSLog(@"Application will terminate - Failed to save changes: %@", error);
         }
     }];
 }

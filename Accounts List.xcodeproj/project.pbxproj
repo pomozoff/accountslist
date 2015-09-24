@@ -101,16 +101,16 @@
 		26BD11891BABFCDA005F13B2 /* Accounts ListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Accounts ListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BD118D1BABFCDA005F13B2 /* Accounts_ListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Accounts_ListUITests.m; sourceTree = "<group>"; };
 		26BD118F1BABFCDA005F13B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26BD119E1BABFE0C005F13B2 /* AccountsListAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountsListAssembly.h; path = Assembly/AccountsListAssembly.h; sourceTree = "<group>"; };
-		26BD119F1BABFE0C005F13B2 /* AccountsListAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountsListAssembly.m; path = Assembly/AccountsListAssembly.m; sourceTree = "<group>"; };
+		26BD119E1BABFE0C005F13B2 /* AccountsListAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsListAssembly.h; sourceTree = "<group>"; };
+		26BD119F1BABFE0C005F13B2 /* AccountsListAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsListAssembly.m; sourceTree = "<group>"; };
 		26BD11A21BABFE70005F13B2 /* Typhoon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Typhoon.framework; path = Carthage/Build/iOS/Typhoon.framework; sourceTree = "<group>"; };
 		26BD11A41BABFE7E005F13B2 /* Typhoon.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Typhoon.framework.dSYM; path = Carthage/Build/iOS/Typhoon.framework.dSYM; sourceTree = "<group>"; };
 		26BD11AF1BAC091E005F13B2 /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
 		26BD11B51BAC0BA4005F13B2 /* CommonModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CommonModel.xcdatamodel; sourceTree = "<group>"; };
 		26BD11C01BAC0CEF005F13B2 /* CoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStore.h; sourceTree = "<group>"; };
 		26BD11C11BAC0CEF005F13B2 /* CoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStore.m; sourceTree = "<group>"; };
-		26BD11C41BAC1025005F13B2 /* ErrorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorHelper.h; path = Helpers/ErrorHelper.h; sourceTree = "<group>"; };
-		26BD11C51BAC1025005F13B2 /* ErrorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ErrorHelper.m; path = Helpers/ErrorHelper.m; sourceTree = "<group>"; };
+		26BD11C41BAC1025005F13B2 /* ErrorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorHelper.h; sourceTree = "<group>"; };
+		26BD11C51BAC1025005F13B2 /* ErrorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorHelper.m; sourceTree = "<group>"; };
 		26BD11C71BAC137F005F13B2 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		26BD11C81BAC1593005F13B2 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStore.h; sourceTree = "<group>"; };
 		26BD11CA1BAC17E2005F13B2 /* Warnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Warnings.xcconfig; path = Application/Warnings.xcconfig; sourceTree = "<group>"; };
@@ -174,6 +174,25 @@
 			path = Loaders;
 			sourceTree = "<group>";
 		};
+		262889B91BB3EBCC00F87115 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				26BD119D1BABFDEA005F13B2 /* Assembly */,
+				26BD11C31BAC1008005F13B2 /* Helpers */,
+				26BD11A91BABFFA0005F13B2 /* Protocols */,
+				262889BA1BB3EC2000F87115 /* Base classes */,
+				26BD119C1BABFD07005F13B2 /* Resources */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		262889BA1BB3EC2000F87115 /* Base classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Base classes";
+			sourceTree = "<group>";
+		};
 		269BC6B31BAC47DD005A1DA3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,11 +240,8 @@
 				269BC6BE1BB03371005A1DA3 /* Views */,
 				269BC6B31BAC47DD005A1DA3 /* Controllers */,
 				26BD11B21BAC0B66005F13B2 /* Models */,
-				26BD11C31BAC1008005F13B2 /* Helpers */,
-				26BD11A91BABFFA0005F13B2 /* Protocols */,
-				26BD119D1BABFDEA005F13B2 /* Assembly */,
+				262889B91BB3EBCC00F87115 /* Library */,
 				26BD119B1BABFCFE005F13B2 /* Application */,
-				26BD119C1BABFD07005F13B2 /* Resources */,
 			);
 			path = "Accounts List";
 			sourceTree = "<group>";
@@ -276,7 +292,7 @@
 				26BD119E1BABFE0C005F13B2 /* AccountsListAssembly.h */,
 				26BD119F1BABFE0C005F13B2 /* AccountsListAssembly.m */,
 			);
-			name = Assembly;
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		26BD11A11BABFE5A005F13B2 /* Frameworks */ = {
@@ -347,7 +363,7 @@
 				26BD11C41BAC1025005F13B2 /* ErrorHelper.h */,
 				26BD11C51BAC1025005F13B2 /* ErrorHelper.m */,
 			);
-			name = Helpers;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		26BD11C91BAC161F005F13B2 /* Data managers */ = {

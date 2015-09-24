@@ -37,7 +37,7 @@
 - (AccountTableViewController *)accountTableViewController {
     return [TyphoonDefinition withClass:[AccountTableViewController class] configuration:^(TyphoonDefinition *definition) {
         [definition injectProperty:@selector(accountManager) with:[self accountManagerMaker]];
-        [definition injectProperty:@selector(commonDataSource) with:[self commonDataSourceMaker]];
+        [definition injectProperty:@selector(commonDataSource) with:self.coreDataSource];
     }];
 }
 
@@ -46,11 +46,8 @@
 - (id <AccountDataSource>)accountManagerMaker {
     return [TyphoonDefinition withClass:[AccountCoreDataManager class] configuration:^(TyphoonDefinition *definition) {
         [definition injectProperty:@selector(dataStore) with:[self dataStoreMaker]];
-        [definition injectProperty:@selector(dataSourceDelegate) with:[self dataSourceDelegateMaker]];
+        [definition injectProperty:@selector(dataSourceDelegate) with:self.coreDataSource];
     }];
-}
-- (id <CommonDataSource, DataPresenterDelegate>)commonDataSourceMaker {
-    return self.coreDataSource;
 }
 - (id <CoreDataSourceDelegate>)dataSourceDelegateMaker {
     return self.coreDataSource;

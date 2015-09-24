@@ -8,6 +8,8 @@
 
 @import UIKit;
 
-@interface ServicesCollectionViewController : UICollectionViewController
+#import "BaseCollectionViewController.h"
+
+@interface ServicesCollectionViewController : BaseCollectionViewController
 
 @end

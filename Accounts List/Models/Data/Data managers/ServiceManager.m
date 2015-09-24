@@ -8,6 +8,10 @@
 
 #import "ServiceManager.h"
 
+@interface ServiceManager () <DataStoreDelegate>
+
+@end
+
 @implementation ServiceManager
 
 #pragma mark - Properties

@@ -9,7 +9,7 @@
 #import "CoreDataSource.h"
 #import "ErrorHelper.h"
 
-@interface CoreDataSource () <NSFetchedResultsControllerDelegate>
+@interface CoreDataSource () <NSFetchedResultsControllerDelegate, CommonDataSource, DataPresenterDelegate, CoreDataSourceDelegate>
 
 @property (nonnull, nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
@@ -53,13 +53,13 @@ static NSString * const kCoreDataManagerErrorDomain = @"CoreDataManagerErrorDoma
 
 #pragma mark - CoreDataSourceDelegate
 
-- (void)updateFetchedResultsController:(NSFetchedResultsController *)newfrc withCompletionHandler:(CompletionHandler)handler {
+- (void)updateFetchedResultsController:(NSFetchedResultsController *)newfrc withCompletion:(CompletionHandler)handler {
     NSFetchedResultsController *oldfrc = _fetchedResultsController;
     if (newfrc != oldfrc) {
         _fetchedResultsController = newfrc;
         newfrc.delegate = self;
         if (newfrc) {
-            [self performFetchWithCompletionHandler:handler];
+            [self performFetchWithCompletion:handler];
         } else {
             handler(YES, nil);
         }
@@ -99,7 +99,7 @@ static NSString * const kCoreDataManagerErrorDomain = @"CoreDataManagerErrorDoma
 
 #pragma mark - Private
 
-- (void)performFetchWithCompletionHandler:(_Nonnull CompletionHandler)handler {
+- (void)performFetchWithCompletion:(_Nonnull CompletionHandler)handler {
     NSError *customError = nil;
     if (self.fetchedResultsController) {
         NSError *error = nil;

@@ -28,16 +28,7 @@ static NSUInteger const kBatchSize = 20;
     if (_dataStore != dataStore) {
         _dataStore = dataStore;
         [_dataStore setupWithCompletion:^(BOOL succeeded, NSError *error) {
-            if (succeeded) {
-                NSFetchedResultsController *frc = [self fetchedResultsControllerWithManagedObjectContext:self.dataStore.mainQueueManagedObjectContext];
-                [self.dataSourceDelegate updateFetchedResultsController:frc withCompletionHandler:^(BOOL innerSucceeded, NSError *innerError) {
-                    if (!innerSucceeded) {
-                        NSLog(@"Setup Fetched Result Controller failed: %@", error);
-                    }
-                }];
-            } else {
-                NSLog(@"Core Data Store setup failed: %@", error);
-            }
+            [self didCompleteCoreDataSetup:succeeded withError:error];
         }];
     }
 }
@@ -45,8 +36,7 @@ static NSUInteger const kBatchSize = 20;
 #pragma mark - ServiceDataSource
 
 - (id <Service>)objectAtIndexPath:(NSIndexPath *)indexPath {
-    Service *service = [self.dataSourceDelegate objectAtIndexPath:indexPath];
-    return service;
+    return [self.dataSourceDelegate objectAtIndexPath:indexPath];
 }
 
 #pragma mark - Private
@@ -64,6 +54,37 @@ static NSUInteger const kBatchSize = 20;
                                                                             sectionNameKeyPath:nil
                                                                                      cacheName:nil];
     return frc;
+}
+
+#pragma mark - Callback handlers
+
+- (void)didCompleteCoreDataSetup:(BOOL)succeeded withError:(NSError *)error {
+    if (succeeded) {
+        NSFetchedResultsController *frc = [self fetchedResultsControllerWithManagedObjectContext:self.dataStore.mainQueueManagedObjectContext];
+        [self.dataSourceDelegate updateFetchedResultsController:frc withCompletion:^(BOOL innerSucceeded, NSError *innerError) {
+            [self didUpdateFetchedResultsController:innerSucceeded withError:innerError];
+        }];
+    } else {
+        NSLog(@"Core Data Store setup failed: %@", error);
+    }
+}
+- (void)didUpdateFetchedResultsController:(BOOL)succeeded withError:(NSError *)error {
+    if (succeeded) {
+        [self.dataFetcher fetchDataWithCompletion:^(id _Nullable collection, NSError * _Nullable innerError) {
+            [self didFetchData:collection withError:innerError];
+        }];
+    } else {
+        NSLog(@"Setup Fetched Result Controller failed: %@", error);
+    }
+}
+- (void)didFetchData:(id _Nullable)collection withError:(NSError *)error {
+    if (collection && !error) {
+        
+    } else if (error) {
+        NSLog(@"Fetching services failed: %@", error);
+    } else {
+        NSLog(@"Fetching services failed, with unknown error");
+    }
 }
 
 @end

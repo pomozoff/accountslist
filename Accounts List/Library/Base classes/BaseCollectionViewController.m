@@ -8,7 +8,7 @@
 
 #import "BaseCollectionViewController.h"
 
-@interface BaseCollectionViewController () <DataPresenter>
+@interface BaseCollectionViewController () <CommonDataSourceDelegate, DataPresenter>
 
 @end
 
@@ -17,6 +17,9 @@
 #pragma mark - Properties
 
 @synthesize updateOperation = _updateOperation;
+@synthesize commonDataSource = _commonDataSource;
+
+#pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,12 +33,10 @@
     
     // Do any additional setup after loading the view.
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 #pragma mark - UICollectionViewDataSource
 

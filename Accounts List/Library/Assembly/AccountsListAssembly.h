@@ -11,6 +11,7 @@
 
 #import "AppDelegate.h"
 #import "AccountTableViewController.h"
+#import "ServicesCollectionViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (AppDelegate *)appDelegate;
 - (AccountTableViewController *)accountTableViewController;
+- (ServicesCollectionViewController *)servicesCollectionViewController;
 
 @end
 

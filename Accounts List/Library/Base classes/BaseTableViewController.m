@@ -8,7 +8,7 @@
 
 #import "BaseTableViewController.h"
 
-@interface BaseTableViewController () <DataPresenter>
+@interface BaseTableViewController () <CommonDataSourceDelegate, DataPresenter>
 
 @end
 
@@ -17,6 +17,7 @@
 #pragma mark - Properties
 
 @synthesize updateOperation = _updateOperation;
+@synthesize commonDataSource = _commonDataSource;
 
 #pragma mark - Lifecycle
 

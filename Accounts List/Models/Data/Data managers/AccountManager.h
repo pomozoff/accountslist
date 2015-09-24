@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface AccountManager : NSObject <DataStoreDelegate>
+@interface AccountManager : NSObject
 
 @end
 

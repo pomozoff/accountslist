@@ -15,12 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol CoreDataSourceDelegate <NSObject>
 
-- (void)updateFetchedResultsController:(NSFetchedResultsController *)newfrc withCompletionHandler:(CompletionHandler)handler;
+- (void)updateFetchedResultsController:(NSFetchedResultsController *)newfrc withCompletion:(CompletionHandler)handler;
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
-@interface CoreDataSource : NSObject <CommonDataSource, DataPresenterDelegate, CoreDataSourceDelegate>
+@interface CoreDataSource : NSObject
 
 @end
 

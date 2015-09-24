@@ -1,0 +1,15 @@
+{
+    "name": "Services",
+    "items": [
+              {
+              "name": "YouTube",
+              "thumbnail": "YouTube.png",
+              "remove": false
+              },
+              {
+              "name": "Vimeo",
+              "thumbnail": "Vimeo.png",
+              "remove": false
+              }
+              ]
+}

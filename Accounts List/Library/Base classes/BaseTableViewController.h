@@ -12,6 +12,4 @@
 
 @interface BaseTableViewController : UITableViewController
 
-@property (nonnull, strong, nonatomic) id <CommonDataSource, DataPresenterDelegate> commonDataSource;
-
 @end

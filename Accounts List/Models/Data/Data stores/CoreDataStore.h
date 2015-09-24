@@ -13,15 +13,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol CoreDataStore <NSObject, DataStore>
-
-@property (nullable, nonatomic, strong, readonly) NSManagedObjectContext *mainQueueManagedObjectContext;
-
-@end
-
-@interface CoreDataStore : NSObject <CoreDataStore>
+@interface CoreDataStore : NSObject <DataStore>
 
 - (instancetype)initWithModelName:(NSString *)modelName NS_DESIGNATED_INITIALIZER;
+
+@property (nullable, nonatomic, strong, readonly) NSManagedObjectContext *mainQueueManagedObjectContext;
 
 @end
 

@@ -10,6 +10,7 @@
 
 #import "DataStore.h"
 #import "DataManagement.h"
+#import "DataFetcher.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -32,7 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface ServiceManager : NSObject <DataStoreDelegate>
+@interface ServiceManager : NSObject
+
+@property (nonatomic, strong) id <DataFetcher> dataFetcher;
 
 @end
 

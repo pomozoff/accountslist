@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "AccountManager.h"
+#import "DataStore.h"
 
 @interface AppDelegate () <DataStoreDelegate>
 

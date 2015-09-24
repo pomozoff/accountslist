@@ -8,6 +8,10 @@
 
 #import "AccountManager.h"
 
+@interface AccountManager () <DataStoreDelegate>
+
+@end
+
 @implementation AccountManager
 
 #pragma mark - Properties

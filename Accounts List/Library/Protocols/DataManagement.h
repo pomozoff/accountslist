@@ -50,6 +50,12 @@ typedef enum : NSUInteger {
 
 @end
 
+@protocol CommonDataSourceDelegate <NSObject>
+
+@property (nonnull, strong, nonatomic) id <CommonDataSource, DataPresenterDelegate> commonDataSource;
+
+@end
+
 NS_ASSUME_NONNULL_END
 
 #endif /* DataManagement_h */
